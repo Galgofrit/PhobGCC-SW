@@ -115,8 +115,29 @@ Pins _pinList {
 };
 
 int calcRumblePower(const int rumble){
-	if(rumble > 0) {
-		return pow(2.0, 7+((rumble+1)/8.0)); //should be 256 when rumble is 7
+  if (rumble == 1) {
+    return 53;
+  }
+  else if (rumble == 2) {
+    return 60;
+  }
+  else if (rumble == 3) {
+    return 85;
+  }
+  else if (rumble == 4) {
+    return 110;
+  }
+  else if (rumble == 5) {
+    return 150;
+  }
+  else if (rumble == 6) {
+    return 200;
+  }
+  else if (rumble == 7) {
+    return 256;
+//  }
+//  else if(rumble > 0) {
+//		return pow(2.0, 7+((rumble+1)/8.0)); //should be 256 when rumble is 7
 	} else {
 		return 0;
 	}
